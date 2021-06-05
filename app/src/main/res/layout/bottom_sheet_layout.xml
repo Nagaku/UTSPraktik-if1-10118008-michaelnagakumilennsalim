@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/drawable_rounded_top">
+    
+    <View
+        android:layout_width="60dp"
+        android:layout_height="6dp"
+        android:background="@drawable/very_rounded"
+        android:paddingTop="16dp"
+        android:layout_marginBottom="25dp"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:background="@drawable/orang"
+        android:layout_marginBottom="32dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Berhasil Disimpan"
+        android:textSize="25sp"
+        android:layout_marginBottom="8dp"
+        />
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Terima kasih, laporan Anda membantu kami dalam melakukan penanganan kasus secara tepat."
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        />
+
+    <TextView
+        android:id="@+id/ok"
+        android:layout_above="@id/hasil_ubah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/drawable_button"
+        android:backgroundTint="#16A75C"
+        android:text="Ok"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textAllCaps="false"
+        />
+
+
+</LinearLayout>

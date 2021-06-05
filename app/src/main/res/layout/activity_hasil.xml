@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HasilActivity"
+    android:padding="16dp"
+    android:background="@color/white">
+
+        <TextView
+            android:id="@+id/hasil_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cek Kembali Isian Data"
+            android:textSize="20sp"
+            android:lineHeight="24sp"
+            android:textColor="#424242"/>
+
+
+        <TextView
+            android:id="@+id/hasil_2"
+            android:layout_below="@id/hasil_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIK"
+            android:textSize="12sp"
+            android:lineHeight="14sp"
+            android:textColor="#424242"
+            android:layout_marginTop="32dp"
+            />
+
+        <EditText
+            android:id="@+id/hasil_3"
+            android:layout_below="@id/hasil_2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/drawable_hasil"
+            android:layout_marginTop="8dp"
+            android:hint="Masukkan NIK"
+            android:paddingHorizontal="12dp"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/hasil_4"
+            android:layout_below="@id/hasil_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama • Harus Diisi"
+            android:textSize="12sp"
+            android:lineHeight="14sp"
+            android:textColor="#424242"
+            android:layout_marginTop="16dp"
+            />
+
+        <EditText
+            android:id="@+id/hasil_5"
+            android:layout_below="@id/hasil_4"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/drawable_hasil"
+            android:layout_marginTop="8dp"
+            android:hint="Masukkan nama"
+            android:paddingHorizontal="12dp"
+            android:focusable="false"
+            />
+
+        <TextView
+            android:id="@+id/hasil_6"
+            android:layout_below="@id/hasil_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal • Harus Diisi"
+            android:textSize="12sp"
+            android:lineHeight="14sp"
+            android:textColor="#424242"
+            android:layout_marginTop="16dp"
+            />
+
+        <EditText
+            android:layout_below="@id/hasil_6"
+            android:id="@+id/form_tanggal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/drawable_hasil"
+            android:layout_marginTop="8dp"
+            android:hint="Pilih Tanggal"
+            android:paddingHorizontal="12dp"
+            android:focusable="false"
+            />
+
+
+        <TextView
+            android:id="@+id/hasil_8"
+            android:layout_below="@id/form_tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Kelamin"
+            android:textSize="12sp"
+            android:lineHeight="14sp"
+            android:textColor="#424242"
+            android:layout_marginTop="16dp"
+            />
+
+        <EditText
+            android:id="@+id/hasil_9"
+            android:layout_below="@id/hasil_8"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/drawable_hasil"
+            android:layout_marginTop="8dp"
+            android:hint="Masukkan NIK"
+            android:paddingHorizontal="12dp"
+            android:focusable="false"
+            />
+
+
+        <TextView
+            android:id="@+id/hasil_10"
+            android:layout_below="@id/hasil_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hubungan Dengan Anda"
+            android:textSize="12sp"
+            android:lineHeight="14sp"
+            android:textColor="#424242"
+            android:layout_marginTop="16dp"
+            />
+
+        <EditText
+            android:id="@+id/hasil_11"
+            android:layout_below="@id/hasil_10"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/drawable_hasil"
+            android:layout_marginTop="8dp"
+            android:hint="Masukkan NIK"
+            android:paddingHorizontal="12dp"
+            android:focusable="false"
+            />
+
+
+        <TextView
+            android:id="@+id/hasil_simpan"
+            android:layout_above="@id/hasil_ubah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/drawable_button"
+            android:backgroundTint="#16A75C"
+            android:text="Simpan"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:onClick="lanjut"
+            />
+
+        <TextView
+            android:id="@+id/hasil_ubah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/drawable_button"
+            android:text="Ubah"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:onClick="balik"
+            />
+
+
+</RelativeLayout>
