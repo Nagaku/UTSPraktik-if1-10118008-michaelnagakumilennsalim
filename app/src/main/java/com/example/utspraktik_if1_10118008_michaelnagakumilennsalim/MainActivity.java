@@ -14,6 +14,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     public static final String iTl = "com.example.utspraktik_if1_10118008_michaelnagakumilennsalim.tl";
     public static final String iJk = "com.example.utspraktik_if1_10118008_michaelnagakumilennsalim.jk";
     public static final String iHub = "com.example.utspraktik_if1_10118008_michaelnagakumilennsalim.hub";
+    public static final String[] MONTHS = {"January","February","March","April","May","June","July",
+            "August","September","October","November","December"};
 
     private DatePicker datePicker;
     private Calendar calendar;
@@ -50,9 +53,14 @@ public class MainActivity extends AppCompatActivity {
         calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
 
+        hNik = findViewById(R.id.nik);
+        hNama = findViewById(R.id.nama);
+        hTl = findViewById(R.id.form_tanggal);
+
         month = calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
         showDate(year, month+1, day);
+        checkIfExist();
     }
 
     @SuppressWarnings("deprecation")
@@ -87,24 +95,52 @@ public class MainActivity extends AppCompatActivity {
             };
 
     private void showDate(int year, int month, int day) {
-        dateView.setText(new StringBuilder().append(day).append("/")
-                .append(month).append("/").append(year));
+        dateView.setText(new StringBuilder().append(day).append(" ")
+                .append(MONTHS[month-1]).append(" ").append(year));
     }
 
     public void selanjutnya(View view) {
         hJk = findViewById(R.id.radioJK);
         hHub = findViewById(R.id.radioHubungan);
-        hNik = findViewById(R.id.nik);
-        hNama = findViewById(R.id.nama);
-        hTl = findViewById(R.id.form_tanggal);
         sJk = findViewById(hJk.getCheckedRadioButtonId());
+        Log.d("ola", String.valueOf(hJk.getCheckedRadioButtonId()));
         sHub = findViewById(hHub.getCheckedRadioButtonId());
-        Intent i = new Intent(MainActivity.this, HasilActivity.class);
-        i.putExtra(iNik, hNik.getText().toString());
-        i.putExtra(iNama, hNama.getText().toString());
-        i.putExtra(iTl, hTl.getText().toString());
-        i.putExtra(iJk, sJk.getText().toString());
-        i.putExtra(iHub, sHub.getText().toString());
-        startActivity(i);
+        if(!validate())
+            Toast.makeText(getApplicationContext(),  "NIK atau Nama tidak boleh kosong", Toast.LENGTH_SHORT).show();
+        else {
+            Intent i = new Intent(MainActivity.this, HasilActivity.class);
+            i.putExtra(iNik, hNik.getText().toString());
+            i.putExtra(iNama, hNama.getText().toString());
+            i.putExtra(iTl, hTl.getText().toString());
+            i.putExtra(iJk, sJk.getText().toString());
+            i.putExtra(iHub, sHub.getText().toString());
+            startActivity(i);
+        }
+    }
+
+    public boolean validate(){
+        if (hNik.getText().toString().isEmpty())
+            return false;
+        else if ( hNama.getText().toString().isEmpty())
+            return false;
+        return true;
+    }
+
+    private void checkIfExist(){
+        Bundle extras=getIntent().getExtras();
+        if ( extras != null){
+            Intent i = getIntent();
+            if(!i.getStringExtra(iNik).isEmpty()){
+                hNik.setText(i.getStringExtra(iNik));
+            }
+            if(!i.getStringExtra(iNama).isEmpty()){
+                hNama.setText(i.getStringExtra(iNama));
+            }
+            if(!i.getStringExtra(iTl).isEmpty()){
+                hTl.setText(i.getStringExtra(iTl));
+            }
+
+        }
+
     }
 }

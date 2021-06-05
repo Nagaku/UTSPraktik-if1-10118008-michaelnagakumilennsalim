@@ -14,50 +14,54 @@
         tools:context=".MainActivity"
         android:layout_margin="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Form Pengisian Data"
-        android:textSize="20sp"
-        android:lineHeight="24sp"
-        android:textColor="#424242"
-        android:layout_marginBottom="31dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="31dp"
+            android:lineHeight="24sp"
+            android:text="Form Pengisian Data"
+            android:textColor="#424242"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/drawable_oren"
-        android:padding="16dp"
-        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_oren_full"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12sp"
+                android:lineHeight="14sp"
+                android:text="Info"
+                android:textColor="#424242"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineHeight="14sp"
+                android:text="Form berikut ini bertujuan untuk memberikan informasi kepada pusat agar dapat mudah dilaporkan"
+                android:textColor="#424242"
+                android:textSize="12sp" />
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Info"
+            android:text="@string/nik"
             android:textSize="12sp"
             android:lineHeight="14sp"
             android:textColor="#424242"
-            android:layout_marginBottom="12sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Form berikut ini bertujuan untuk memberikan informasi kepada pusat agar dapat mudah dilaporkan"
-            android:textSize="12sp"
-            android:lineHeight="14sp"
-            android:textColor="#424242"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="NIK"
-        android:textSize="12sp"
-        android:lineHeight="14sp"
-        android:textColor="#424242"
-        android:layout_marginTop="24dp"
-        />
+            android:layout_marginTop="24dp"
+            android:textStyle="bold"
+            />
 
     <EditText
         android:id="@+id/nik"
@@ -71,11 +75,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama • Harus Diisi"
+        android:text="@string/nama"
         android:textSize="12sp"
         android:lineHeight="14sp"
         android:textColor="#424242"
         android:layout_marginTop="24dp"
+        android:textStyle="bold"
         />
 
     <EditText
@@ -90,11 +95,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tanggal • Harus Diisi"
+        android:text="@string/tl"
         android:textSize="12sp"
         android:lineHeight="14sp"
         android:textColor="#424242"
         android:layout_marginTop="24dp"
+        android:textStyle="bold"
         />
 
     <EditText
@@ -116,9 +122,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:lineHeight="14sp"
-            android:text="Jenis Kelamin • Harus Diisi"
+            android:text="@string/jk"
             android:textColor="#424242"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:textStyle="bold"/>
 
         <RadioGroup
             android:id="@+id/radioJK"
@@ -146,11 +153,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hubungan Dengan Anda • Harus Diisi"
+            android:text="@string/hub"
             android:textSize="12sp"
             android:lineHeight="14sp"
             android:textColor="#424242"
             android:layout_marginTop="24dp"
+            android:textStyle="bold"
             />
 
         <RadioGroup

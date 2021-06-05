@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">UTSPraktik-if1-10118008-michaelnagakumilennsalim</string>
+    <string name="nik">NIK</string>
+    <string name="nama">Nama <font color='#16A75C'>• Harus Diisi</font></string>
+    <string name="tl">Tanggal Lahir <font color='#16A75C'>• Harus Diisi</font></string>
+    <string name="jk">Jenis Kelamin <font color='#16A75C'>• Harus Diisi</font></string>
+    <string name="hub">Hubungan Dengan Anda <font color='#16A75C'>• Harus Diisi</font></string>
 </resources>

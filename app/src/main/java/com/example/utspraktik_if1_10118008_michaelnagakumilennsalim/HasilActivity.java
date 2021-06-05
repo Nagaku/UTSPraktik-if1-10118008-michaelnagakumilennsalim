@@ -13,6 +13,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HasilActivity extends AppCompatActivity {
 
-    private TextView nik, nama, tanggal, jk, hub;
+    private EditText nik, nama, tanggal, jk, hub;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,7 @@ public class HasilActivity extends AppCompatActivity {
     }
 
     public void balik(View view) {
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(HasilActivity.this, MainActivity.class);
         i.putExtra(MainActivity.iNik, nik.getText().toString());
         i.putExtra(MainActivity.iNama, nama.getText().toString());
         i.putExtra(MainActivity.iTl, tanggal.getText().toString());

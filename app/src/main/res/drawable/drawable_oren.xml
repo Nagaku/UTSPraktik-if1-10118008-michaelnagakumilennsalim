@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item >
+    <item>
         <shape android:shape="rectangle">
             <corners android:radius="9dp"/>
             <solid android:color="#FFF9E1"/>
@@ -8,13 +8,12 @@
     </item>
     <item>
         <rotate
-            android:fromDegrees="45"
+            android:fromDegrees="140"
             android:pivotX="40%"
-            android:pivotY="0%"
-            android:toDegrees="0">
+            android:pivotY="30%">
             <shape android:shape="rectangle">
-                <gradient android:startColor="#FFD08A" android:centerColor="#FFF9E1" android:endColor="#FFF9E1"/>
-                <corners android:radius="1000dp"/>
+                <gradient android:startColor="#FFDC8E"  android:endColor="#FFF9E1"/>
+                <corners android:radius="5000dp"/>
             </shape>
         </rotate>
     </item>
